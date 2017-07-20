@@ -5,9 +5,7 @@ class FileReader
       f = File.new(file_name, 'r:UTF-8')
       lines = f.readlines
       f.close
-      return lines
-    else
-      return nil
+      lines
     end
   end
 end

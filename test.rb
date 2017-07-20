@@ -1,8 +1,8 @@
 data_questions = File.new("./data/questions.txt","r:UTF-8")
 data_results = File.new("./data/results.txt","r:UTF-8")
 
-require "./file_reader.rb"
-require "./game.rb"
+require_relative "lib/file_reader.rb"
+require_relative "lib/game.rb"
 
 # Ввод имени с терминала
 name = ARGV[0]
@@ -29,4 +29,4 @@ until game.finished?
   game.make_questions
 end
 
-print_results = game.return_results(results)
+puts game.return_results(results)
